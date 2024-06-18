@@ -1,0 +1,78 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "eiger",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#builtins"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#operators"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.eiger",
+				"match": "\\b(include|for|class|func|end|dataclass|if|while|then|to|do)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.eiger",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.eiger",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [{
+				"name":"comment.line.eiger",
+				"begin": "~",
+				"end": "\\n"
+			}]
+		},
+		"numbers":{
+			"patterns": [{
+				"name": "constant.numeric.eiger",
+				"match": "\\b(0x[0-9a-fA-F]+|[0-9]+(\\.[0-9]*)?|\\.[0-9]+)\\b"
+			}]
+		},
+		"builtins":{
+			"patterns": [{
+				"name": "support.function.eiger",
+				"match": "(\\w+)\\("
+			}]
+		},
+		"constants":{
+			"patterns": [{
+				"name": "constant.language.eiger",
+				"match": "\\b(true|false|nix|this)\\b"
+			}]
+		},
+		"operators":{
+			"patterns": [{
+				"name": "keyword.operator.eiger",
+				"match": "(\\+|-|\\*|/|=|not)"
+			}]
+		}
+	},
+	"scopeName": "source.ei"
+}

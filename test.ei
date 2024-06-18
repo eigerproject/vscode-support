@@ -1,0 +1,41 @@
+~ include the math stdlib library
+include math
+
+class Person
+    func Person(name, surname)
+        this.name = name
+        this.surname = surname
+    end
+
+    func Introduction()
+        emitln("I am " + this.name + " " + this.surname + "!")
+    end
+
+    func Greet(other)
+        emitln(this.name + " greeted " + other.name + "!")
+    end
+end
+
+~ this is a dataclass
+dataclass test
+    func add(a,b)
+        ret a + b
+    end
+end
+
+px = Person("Name1", "Surname1")
+py = Person("Name2", "Surname2")
+
+px.Introduction()
+py.Introduction()
+px.Greet(py)
+
+if true then
+    emitln(Person("a","b").Introduction())
+end
+
+while true do
+    for i = 0 to 1 + 1 do
+        ~ comment
+    end
+end

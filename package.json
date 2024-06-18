@@ -1,0 +1,31 @@
+{
+  "name": "eiger",
+  "displayName": "Eiger",
+  "description": "Eigerlang support for VSCode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "eiger",
+      "aliases": ["Eiger", "eiger"],
+      "extensions": [".ei"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "eiger",
+      "scopeName": "source.ei",
+      "path": "./syntaxes/eiger.tmLanguage.json"
+    }],
+    "snippets": [
+      {
+          "language": "eiger",
+          "path": "./snippets/eiger-snippets.json"
+      }
+    ]
+  }
+}

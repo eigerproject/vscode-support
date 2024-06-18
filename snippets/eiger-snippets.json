@@ -1,0 +1,124 @@
+{
+	"emit": {
+		"prefix": "emit",
+		"body": [
+			"emit($0)"
+		],
+		"description": "Print a string to the shell"
+	},
+    "emitln": {
+		"prefix": "emitln",
+		"body": [
+			"emitln($0)"
+		],
+		"description": "Print a string to the shell with newline"
+	},
+    "in": {
+		"prefix": "in",
+		"body": [
+			"in($0)"
+		],
+		"description": "Requests input from the user and returns it as a string"
+	},
+	"include": {
+		"prefix": "include",
+		"body": [
+			"include $0"
+		],
+		"description": "Includes module"
+	},
+	"include str": {
+		"prefix": "include",
+		"body": [
+			"include \"$0\""
+		],
+		"description": "Includes module from file path"
+	},
+    "cls": {
+		"prefix": "cls",
+		"body": [
+			"cls()"
+		],
+		"description": "Clear the shell"
+	},
+    "int": {
+		"prefix": "int",
+		"body": [
+			"int($0)"
+		],
+		"description": "Converts to integer"
+	},
+    "double": {
+		"prefix": "double",
+		"body": [
+			"double($0)"
+		],
+		"description": "Converts to double"
+	},
+    "nix": {
+		"prefix": "nix",
+		"body": [
+			"nix"
+		]
+	},
+    "false": {
+		"prefix": "false",
+		"body": [
+			"false"
+		]
+	},
+    "true": {
+		"prefix": "true",
+		"body": [
+			"true"
+		]
+	},
+    "if": {
+		"prefix": "if",
+		"body": [
+			"if $1 then $2 end"
+		]
+	},
+    "for": {
+		"prefix": "for",
+		"body": [
+			"for $1 = $2 to $3 do $4 end"
+		]
+	},
+    "ifelse": {
+		"prefix": "ifelse",
+		"body": [
+			"if $1 then $2 else $3 end"
+		]
+	},
+    "while": {
+		"prefix": "while",
+		"body": [
+			"while $1 do $2 end"
+		]
+	},
+    "not": {
+		"prefix": "not",
+		"body": [
+			"not $0"
+		]
+	},
+    "to": {
+		"prefix": "to",
+		"body": [
+			"to $0"
+		]
+	},
+    "return": {
+		"prefix": "ret",
+		"body": [
+			"ret $0"
+		]
+	},
+    "function": {
+		"prefix": "func",
+		"body": [
+			"func $1 ($2) $3 end"
+		]
+	}
+}
