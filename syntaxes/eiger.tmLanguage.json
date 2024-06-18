@@ -28,7 +28,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.eiger",
-				"match": "\\b(include|for|class|func|end|dataclass|if|while|then|to|do)\\b"
+				"match": "\\b(include|for|class|func|end|dataclass|if|while|then|to|do|else)\\b"
 			}]
 		},
 		"strings": {
