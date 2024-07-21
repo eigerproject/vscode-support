@@ -3,6 +3,9 @@
 	"name": "eiger",
 	"patterns": [
 		{
+			"include": "#names"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
@@ -25,6 +28,19 @@
 		}
 	],
 	"repository": {
+		"names": {
+			"patterns": [
+				{
+					"name": "entity.name.type.class",
+					"match": "(?<=\\b(?:class|include|dataclass)\\s+)\\w+",
+					"captures": {
+						"0": {
+						  "name": "entity.name.type.class"
+						}
+					  }
+				}
+			]
+		},
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.eiger",
@@ -58,7 +74,7 @@
 		"builtins":{
 			"patterns": [{
 				"name": "support.function.eiger",
-				"match": "(\\w+)\\("
+				"match": "(?<=\\b)(\\w+)\\s*\\("
 			}]
 		},
 		"constants":{
