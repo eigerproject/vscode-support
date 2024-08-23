@@ -3,9 +3,6 @@
 	"name": "eiger",
 	"patterns": [
 		{
-			"include": "#names"
-		},
-		{
 			"include": "#keywords"
 		},
 		{
@@ -25,6 +22,9 @@
 		},
 		{
 			"include": "#operators"
+		},
+		{
+			"include": "#names"
 		}
 	],
 	"repository": {
@@ -44,7 +44,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.eiger",
-				"match": "\\b(include|for|class|func|end|dataclass|if|while|then|to|do|else)\\b"
+				"match": "\\b(include|for|class|func|end|dataclass|if|while|then|to|do|else|elif|let|private|readonly)\\b"
 			}]
 		},
 		"strings": {
@@ -86,7 +86,7 @@
 		"operators":{
 			"patterns": [{
 				"name": "keyword.operator.eiger",
-				"match": "(\\+|-|\\*|/|=|not|\\?\\=|\\!\\=|\\%|\\^)"
+				"match": "(\\+|-|\\*|/|=|not|\\?\\=|\\!\\=|\\%|\\^|@)"
 			}]
 		}
 	},

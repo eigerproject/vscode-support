@@ -2,6 +2,9 @@
 include math
 
 class Person
+    let private name
+    let private surname
+
     func Person(name, surname)
         this.name = name
         this.surname = surname
@@ -11,6 +14,7 @@ class Person
         emitln("I am " + this.name + " " + this.surname + "!")
     end
 
+
     func Greet(other)
         emitln(this.name + " greeted " + other.name + "!")
     end
@@ -18,13 +22,11 @@ end
 
 ~ this is a dataclass
 dataclass test
-    func add(a,b)
-        ret a + b
-    end
+    func add(a,b) > a + b
 end
 
-px = Person("Name1", "Surname1")
-py = Person("Name2", "Surname2")
+let px = Person("Name1", "Surname1")
+let py = Person("Name2", "Surname2")
 
 px.Introduction()
 py.Introduction()
@@ -37,5 +39,12 @@ end
 while true do
     for i = 0 to 1 + 1 do
         ~ comment
+        if i == 1 then
+            emitln(i)
+        elif i == 2 then
+            emitln(i - 1)
+        else
+            emitln("a")
+        end
     end
 end
